@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: fedeettlinpipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: fedeettlinpipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: fedeettlinpipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: fedeettlinpipelinesjavascriptdocker 
+          image: imagecontainers.azurecr.io/fedeettlinpipelinesjavascriptdocker
+          ports:
+          - containerPort: 80
